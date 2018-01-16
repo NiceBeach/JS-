@@ -52,6 +52,7 @@
 
 - (BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType {
     NSString *url = request.URL.absoluteString;
+    //拦截域名
     if ([url rangeOfString:@"toyun://"].location != NSNotFound) {
         NSLog(@"%@",url);
         return NO;
